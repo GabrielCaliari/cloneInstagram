@@ -1,0 +1,52 @@
+[debug] [2023-06-25T20:45:24.223Z] ----------------------------------------------------------------------
+[debug] [2023-06-25T20:45:24.226Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-06-25T20:45:24.227Z] CLI Version:   12.4.0
+[debug] [2023-06-25T20:45:24.227Z] Platform:      win32
+[debug] [2023-06-25T20:45:24.227Z] Node Version:  v18.0.0
+[debug] [2023-06-25T20:45:24.235Z] Time:          Sun Jun 25 2023 17:45:24 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2023-06-25T20:45:24.236Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-25T20:45:24.255Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-06-25T20:45:24.509Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-25T20:45:24.510Z] > authorizing via signed-in user (gabriel15caliari@hotmail.com)
+[debug] [2023-06-25T20:45:24.511Z] [iam] checking project instaclone-b78e8 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-06-25T20:45:24.512Z] > refreshing access token with scopes: []
+[debug] [2023-06-25T20:45:24.515Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-25T20:45:24.516Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-25T20:45:24.763Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-06-25T20:45:24.764Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-25T20:45:24.795Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/instaclone-b78e8:testIamPermissions [none]
+[debug] [2023-06-25T20:45:24.795Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/instaclone-b78e8:testIamPermissions x-goog-quota-user=projects/instaclone-b78e8
+[debug] [2023-06-25T20:45:24.795Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/instaclone-b78e8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-06-25T20:45:24.897Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-06-25T20:45:24.897Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-06-25T20:45:25.834Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/instaclone-b78e8:testIamPermissions 200
+[debug] [2023-06-25T20:45:25.834Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/instaclone-b78e8:testIamPermissions {}
+[debug] [2023-06-25T20:45:25.835Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project instaclone-b78e8:
+
+  cloudfunctions.functions.create
+  cloudfunctions.functions.delete
+  cloudfunctions.functions.get
+  cloudfunctions.functions.list
+  cloudfunctions.functions.update
+  cloudfunctions.operations.get
+  firebase.projects.get
+[debug] [2023-06-25T20:45:25.835Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/instaclone-b78e8/serviceAccounts/instaclone-b78e8@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-06-25T20:45:25.835Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/instaclone-b78e8/serviceAccounts/instaclone-b78e8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-06-25T20:45:26.771Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/instaclone-b78e8/serviceAccounts/instaclone-b78e8@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2023-06-25T20:45:26.772Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/instaclone-b78e8/serviceAccounts/instaclone-b78e8@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2023-06-25T20:45:26.772Z] [functions] service account IAM check errored, deploy may fail: HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Unknown service account","status":404}
+[info] 
+[info] === Deploying to 'instaclone-b78e8'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-06-25T20:45:26.778Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/instaclone-b78e8 [none]
+[debug] [2023-06-25T20:45:27.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/instaclone-b78e8 403
+[debug] [2023-06-25T20:45:27.244Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/instaclone-b78e8 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-06-25T20:45:27.244Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-06-25T20:45:28.393Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Gabriel\AppData\Roaming\nvm\v18.0.0\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Gabriel\AppData\Roaming\nvm\v18.0.0\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project instaclone-b78e8. Please make sure the project exists and your account has permission to access it.
